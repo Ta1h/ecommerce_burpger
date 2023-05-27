@@ -1,0 +1,200 @@
+@import url('props_resets.css');
+body {
+    background: url('../assets/images/forms-bg.jpeg');
+    background-size: cover;
+}
+
+/* Form style for Login, Sign up , Forgot and Change password */
+.form-section {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.form-logo,
+.adminform-logo {
+    margin: 0 auto;
+}
+
+.form-logo a,
+.adminform-logo a {
+    font-size: var(--fs-1000);
+    color: var(--clr-primary-color);
+}
+
+.adminform-logo a {
+    font-size: var(--fs-900);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+:where(.flow :not(:first-child)) {
+    margin-top: 1.5em;
+}
+
+:where(.inputs :not(:first-child)) {
+    margin-top: 0.5em;
+}
+
+:where(.flow2 :not(:first-child)) {
+    margin-top: 0.5em;
+}
+
+:where(.inputs2 :not(:first-child)) {
+    margin-top: 0.2em;
+}
+
+.form-content, 
+.form-content2 {
+    padding: 3em 3.5em;
+    background: #fff;
+    border: none;
+    border-radius: 2.5rem;
+    box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.4);
+}
+
+.form-content2 {
+    height: 34.375rem;
+    overflow-y: auto;
+}
+
+.form-content p, 
+.form-content2 p {
+    text-align: center;
+}
+
+p,
+label {
+    color: black;
+}
+
+.inputs p {
+    text-align: end;
+}
+
+.form-content a, 
+.form-content2 a {
+    color: var(--clr-accent-color);
+}
+
+.form-content a:hover, 
+.form-content a:focus-visible {
+    color: var(--clr-primary-color);
+}
+
+.form-content2 a:hover,
+.form-content2 a:focus-visible {
+    color: var(--clr-primary-color);
+}
+
+.form-content2 p {
+    padding-top: 0.8em;
+}
+
+form input {
+    outline: none;
+    margin-bottom: 15px;
+    font-size: var(--fs-400);
+    color: black;
+    text-align: left;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #e5e5e5;
+    transition: 0.3s all ease;
+}
+
+form input:focus {
+    border-color: var(--clr-accent-color);
+}
+
+h2 {
+    text-align: center;
+    color: var(--clr-primary-color);
+}
+
+button {
+    width: 100%;
+    justify-content: center;
+}
+
+.g-recaptcha{
+    margin: 0.5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Alert style */
+.alert {    
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    margin: 1rem 0;
+}
+
+.alert-success {
+    background-color: #42ba96;
+}
+
+.alert-danger {
+    background-color: #fc5555;
+}
+
+.alert-info {
+    background-color: #2E9AFE;
+}
+
+.alert-warning {
+    background-color: #ff9966;
+}
+
+@media screen and (max-width: 75rem) {
+    body {
+        font-size: var(--fs-300);
+    }
+
+    .form-content, .form-content2 {
+        padding: 2.5em 2.5em;
+    }
+
+    .form-logo a {
+        font-size: var(--fs-800);
+    }
+
+    .adminform-logo a {
+        font-size: var(--fs-700);
+    }
+
+    .form-content h2,
+    .form-content2 h2 {
+        font-size: var(--fs-700);
+    }
+
+    .inputs input {
+        font-size: var(--fs-300);
+    }
+
+    .inputs2 input {
+        font-size: var(--fs-300);
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    .grid-container {
+        gap: 1.5em;
+        grid-template-columns: 1fr;
+    }
+}
+
+
